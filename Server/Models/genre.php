@@ -13,10 +13,22 @@ class Genre
       $this->primary_genre = $input_primary_genre;
    }
 
+   public function getPrimaryGenre()
+   {
+
+      return $this->primary_genre;
+   }
+
    public function setSecondaryGenre(string $input_secondary_genre)
    {
 
       $this->secondary_genre = $input_secondary_genre;
+   }
+
+   public function getSecondaryGenre()
+   {
+
+      return $this->secondary_genre;
    }
 
    public function setTertiaryGenre(string $input_tertiary_genre)
@@ -24,5 +36,10 @@ class Genre
 
       $this->tertiary_genre = $input_tertiary_genre;
    }
-   
+
+   public function getTertiaryGenre()
+   {
+
+      return $this->tertiary_genre;
+   }
 }
