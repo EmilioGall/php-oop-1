@@ -18,8 +18,8 @@ $genre_horror = new Genre('Horror');
 $genres_array[] = $genre_horror;
 $genre_musical = new Genre('Musical');
 $genres_array[] = $genre_musical;
-$genre_teen_drama = new Genre('Teen Drama');
-$genres_array[] = $genre_teen_drama;
+$genre_drama = new Genre('Drama');
+$genres_array[] = $genre_drama;
 
 var_dump($genres_array);
 
@@ -28,4 +28,6 @@ $movie1->setSecondaryGenre($genre_animation);
 
 var_dump($movie1);
 
-echo 'connected';
+var_dump($movie1->getSecondaryGenre());
+
+// echo 'connected';

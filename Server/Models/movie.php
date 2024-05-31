@@ -4,14 +4,14 @@ class Movie
 {
 
    private string $title;
-   private string $director;
-   private string $country;
    private string $production_year;
    private Genre  $primary_genre;
    private Genre  $secondary_genre;
    private Genre  $tertiary_genre;
+   private string $director;
+   private string $country;
    private string $synopsis;
-   private Cast  $cast;
+   private array  $cast;
 
    public function __construct(string $input_title, string $input_production_year, Genre  $input_primary_genre)
    {
@@ -22,12 +22,29 @@ class Movie
 
    }
 
+   public function getTitle()
+   {
+
+      return $this->title;
+   }
+
+   public function getProductionYear()
+   {
+
+      return $this->production_year;
+   }
+
+   public function getPrimaryGenre()
+   {
+
+      return $this->primary_genre;
+   }
+
    public function setSecondaryGenre(Genre $input_secondary_genre)
    {
 
       $this->secondary_genre = $input_secondary_genre;
    }
-
    public function getSecondaryGenre()
    {
 
@@ -39,10 +56,53 @@ class Movie
 
       $this->tertiary_genre = $input_tertiary_genre;
    }
-
    public function getTertiaryGenre()
    {
 
       return $this->tertiary_genre;
+   }
+
+   public function setDirector(string $input_director)
+   {
+
+      $this->director = $input_director;
+   }
+   public function getDirector()
+   {
+
+      return $this->director;
+   }
+
+   public function setCountry(string $input_country)
+   {
+
+      $this->country = $input_country;
+   }
+   public function getcountry()
+   {
+
+      return $this->country;
+   }
+
+   public function setSynopsis(string $input_synopsis)
+   {
+
+      $this->synopsis = $input_synopsis;
+   }
+   public function getsynopsis()
+   {
+
+      return $this->synopsis;
+   }
+
+   public function setCast(array $input_cast)
+   {
+
+      $this->cast = $input_cast;
+   }
+   public function getcast()
+   {
+
+      return $this->cast;
    }
 }
