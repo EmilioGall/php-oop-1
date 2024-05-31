@@ -4,8 +4,6 @@ class Genre
 {
 
    private string $primary_genre;
-   private string $secondary_genre;
-   private string $tertiary_genre;
 
    public function __construct(string $input_primary_genre)
    {
@@ -19,27 +17,4 @@ class Genre
       return $this->primary_genre;
    }
 
-   public function setSecondaryGenre(string $input_secondary_genre)
-   {
-
-      $this->secondary_genre = $input_secondary_genre;
-   }
-
-   public function getSecondaryGenre()
-   {
-
-      return $this->secondary_genre;
-   }
-
-   public function setTertiaryGenre(string $input_tertiary_genre)
-   {
-
-      $this->tertiary_genre = $input_tertiary_genre;
-   }
-
-   public function getTertiaryGenre()
-   {
-
-      return $this->tertiary_genre;
-   }
 }
