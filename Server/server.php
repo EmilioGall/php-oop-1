@@ -1,5 +1,6 @@
 <?php
 
+require_once __DIR__ . '/partials/functions.php';
 require_once __DIR__ . '/Models/movie.php';
 require_once __DIR__ . '/Models/genre.php';
 require_once __DIR__ . '/Models/actor.php';
@@ -265,4 +266,5 @@ $movies_array[] = $movie10;
 
 var_dump($movies_array);
 
-// echo 'connected';
+
+send_http_response($movies_array);
