@@ -64,7 +64,7 @@ $parasite_actors_array[] = $cho_yeojeong;
 
 /* Dune */
 $dune_actors_array = [];
-// Timothée Chalamet - Rebecca Ferguson - Zendaya
+
 $timothee_chalamet = new Actor('Timothée', 'Chalamet');
 $dune_actors_array[] = $timothee_chalamet;
 $rebecca_ferguson = new Actor('Rebecca', 'Ferguson');
@@ -72,7 +72,31 @@ $dune_actors_array[] = $rebecca_ferguson;
 $zendaya_coleman = new Actor('Zendaya', 'Coleman');
 $dune_actors_array[] = $zendaya_coleman;
 
-var_dump($dune_actors_array);
+// var_dump($dune_actors_array);
+
+/* Dune II */
+$dune2_actors_array = [];
+
+$timothee_chalamet = new Actor('Timothée', 'Chalamet');
+$dune2_actors_array[] = $timothee_chalamet;
+$rebecca_ferguson = new Actor('Rebecca', 'Ferguson');
+$dune2_actors_array[] = $rebecca_ferguson;
+$zendaya_coleman = new Actor('Zendaya', 'Coleman');
+$dune2_actors_array[] = $zendaya_coleman;
+
+// var_dump($dune2_actors_array);
+
+/* Interstellar */
+$interstellar_actors_array = [];
+
+$matthew_mcconaughey = new Actor('Matthew', 'McConaughey');
+$interstellar_actors_array[] = $matthew_mcconaughey;
+$anne_hathaway = new Actor('Anne', 'Hathaway');
+$interstellar_actors_array[] = $anne_hathaway;
+$jessica_chastain = new Actor('Jessica', 'Chastain');
+$interstellar_actors_array[] = $jessica_chastain;
+
+var_dump($interstellar_actors_array);
 
 echo '<hr>';
 
@@ -115,8 +139,8 @@ $movie_parasite->setSynopsis("Greed and class discrimination threaten the newly-
 // var_dump($movie_parasite);
 $movies_array[] = $movie_parasite;
 
-// echo '<hr>';
 
+/* Dune */
 $movie_dune = new Movie('Dune', '2021', $genre_action);
 $movie_dune->setSecondaryGenre($genre_adventure);
 $movie_dune->setTertiaryGenre($genre_drama);
@@ -131,35 +155,36 @@ $movie_dune->setSynopsis("A noble family becomes embroiled in a war for control 
 // var_dump($movie_dune);
 $movies_array[] = $movie_dune;
 
-// echo '<hr>';
 
-$movie4 = new Movie('Dune: Part II', '2024', $genre_action);
-$movie4->setSecondaryGenre($genre_adventure);
-$movie4->setTertiaryGenre($genre_drama);
-$movie4->setPoster('DunePartTwo(2024)');
-$movie4->setLength(166);
-$movie4->setRating(86);
-$movie4->setDirector(['Denis Villeneuve']);
-$movie4->setCountry('United States');
-$movie4->setSynopsis("Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.");
+/* Dune II */
+$movie_dune2 = new Movie('Dune: Part II', '2024', $genre_action);
+$movie_dune2->setSecondaryGenre($genre_adventure);
+$movie_dune2->setTertiaryGenre($genre_drama);
+$movie_dune2->setPoster('DunePartTwo(2024)');
+$movie_dune2->setLength(166);
+$movie_dune2->setRating(86);
+$movie_dune2->setDirector(['Denis Villeneuve']);
+$movie_dune2->setCountry('United States');
+$movie_dune2->setCast($dune2_actors_array);
+$movie_dune2->setSynopsis("Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.");
 
-// var_dump($movie4);
-$movies_array[] = $movie4;
+// var_dump($movie_dune2);
+$movies_array[] = $movie_dune2;
 
-// echo '<hr>';
+/* Interstellar */
+$movie_interstellar = new Movie('Interstellar', '2014', $genre_adventure);
+$movie_interstellar->setSecondaryGenre($genre_drama);
+$movie_interstellar->setTertiaryGenre($genre_scifi);
+$movie_interstellar->setPoster('Interstellar(2014)');
+$movie_interstellar->setLength(169);
+$movie_interstellar->setRating(87);
+$movie_interstellar->setDirector(['Christopher Nolan']);
+$movie_interstellar->setCountry('British-American');
+$movie_interstellar->setCast($interstellar_actors_array);
+$movie_interstellar->setSynopsis("When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.");
 
-$movie5 = new Movie('Interstellar', '2014', $genre_adventure);
-$movie5->setSecondaryGenre($genre_drama);
-$movie5->setTertiaryGenre($genre_scifi);
-$movie5->setPoster('Interstellar(2014)');
-$movie5->setLength(169);
-$movie5->setRating(87);
-$movie5->setDirector(['Christopher Nolan']);
-$movie5->setCountry('British-American');
-$movie5->setSynopsis("When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.");
-
-// var_dump($movie5);
-$movies_array[] = $movie5;
+// var_dump($movie_interstellar);
+$movies_array[] = $movie_interstellar;
 
 // echo '<hr>';
 
