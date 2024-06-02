@@ -52,7 +52,7 @@ $the_lion_king_actors_array[] = $james_earl_jones;
 
 /* Parasite */
 $parasite_actors_array = [];
-// Song Kang-ho - Lee Sun-kyun - Cho Yeo-jeong
+
 $song_kangho = new Actor('Song', 'Kang-ho');
 $parasite_actors_array[] = $song_kangho;
 $lee_sunkyun = new Actor('Lee', 'Sun-kyun');
@@ -62,7 +62,17 @@ $parasite_actors_array[] = $cho_yeojeong;
 
 // var_dump($parasite_actors_array);
 
+/* Dune */
+$dune_actors_array = [];
+// Timothée Chalamet - Rebecca Ferguson - Zendaya
+$timothee_chalamet = new Actor('Timothée', 'Chalamet');
+$dune_actors_array[] = $timothee_chalamet;
+$rebecca_ferguson = new Actor('Rebecca', 'Ferguson');
+$dune_actors_array[] = $rebecca_ferguson;
+$zendaya_coleman = new Actor('Zendaya', 'Coleman');
+$dune_actors_array[] = $zendaya_coleman;
 
+var_dump($dune_actors_array);
 
 echo '<hr>';
 
@@ -97,6 +107,7 @@ $movie_parasite->setLength(132);
 $movie_parasite->setRating(85);
 $movie_parasite->setDirector(['Bong Joon Ho']);
 $movie_parasite->setCountry('South Korea');
+$movie_parasite->setCast($parasite_actors_array);
 $movie_parasite->setSynopsis("Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.");
 
 // var_dump($movie_parasite->getSecondaryGenre());
@@ -106,18 +117,19 @@ $movies_array[] = $movie_parasite;
 
 // echo '<hr>';
 
-$movie3 = new Movie('Dune', '2021', $genre_action);
-$movie3->setSecondaryGenre($genre_adventure);
-$movie3->setTertiaryGenre($genre_drama);
-$movie3->setPoster('Dune(2021)');
-$movie3->setLength(155);
-$movie3->setRating(80);
-$movie3->setDirector(['Denis Villeneuve']);
-$movie3->setCountry('United States');
-$movie3->setSynopsis("A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.");
+$movie_dune = new Movie('Dune', '2021', $genre_action);
+$movie_dune->setSecondaryGenre($genre_adventure);
+$movie_dune->setTertiaryGenre($genre_drama);
+$movie_dune->setPoster('Dune(2021)');
+$movie_dune->setLength(155);
+$movie_dune->setRating(80);
+$movie_dune->setDirector(['Denis Villeneuve']);
+$movie_dune->setCountry('United States');
+$movie_dune->setCast($dune_actors_array);
+$movie_dune->setSynopsis("A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.");
 
-// var_dump($movie3);
-$movies_array[] = $movie3;
+// var_dump($movie_dune);
+$movies_array[] = $movie_dune;
 
 // echo '<hr>';
 
