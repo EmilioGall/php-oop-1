@@ -27,7 +27,7 @@ $genres_array[] = $genre_musical;
 $genre_thriller = new Genre('Thriller');
 $genres_array[] = $genre_thriller;
 
-var_dump($genres_array);
+// var_dump($genres_array);
 
 
 $movies_array = [];
@@ -41,11 +41,29 @@ $movie1->setDirector(['Roger Allers', 'Rob Minkoff']);
 $movie1->setCountry('United States');
 $movie1->setSynopsis('Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.');
 
-
+var_dump($movie1->getSecondaryGenre());
 
 var_dump($movie1);
+$movies_array[] = $movie1;
 
+echo '<hr>';
 
-var_dump($movie1->getSecondaryGenre());
+$movie2 = new Movie('Parasite', '2019', $genre_drama);
+$movie2->setSecondaryGenre($genre_thriller);
+// $movie2->setTertiaryGenre(null);
+$movie2->setLength(132);
+$movie2->setRating(85);
+$movie2->setDirector(['Bong Joon Ho']);
+$movie2->setCountry('South Korea');
+$movie2->setSynopsis('Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.');
+
+var_dump($movie2->getSecondaryGenre());
+
+var_dump($movie2);
+$movies_array[] = $movie2;
+
+echo '<hr>';
+
+var_dump($movies_array);
 
 // echo 'connected';
