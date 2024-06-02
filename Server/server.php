@@ -22,8 +22,8 @@ $genre_fantasy = new Genre('Fantasy');
 $genres_array[] = $genre_fantasy;
 $genre_horror = new Genre('Horror');
 $genres_array[] = $genre_horror;
-$genre_musical = new Genre('Musical');
-$genres_array[] = $genre_musical;
+$genre_scifi = new Genre('Sci-fi');
+$genres_array[] = $genre_scifi;
 $genre_thriller = new Genre('Thriller');
 $genres_array[] = $genre_thriller;
 
@@ -90,6 +90,20 @@ $movie4->setSynopsis("Paul Atreides unites with Chani and the Fremen while seeki
 
 var_dump($movie4);
 $movies_array[] = $movie4;
+
+echo '<hr>';
+
+$movie5 = new Movie('Interstellar', '2014', $genre_adventure);
+$movie5->setSecondaryGenre($genre_drama);
+$movie5->setTertiaryGenre($genre_scifi);
+$movie5->setLength(169);
+$movie5->setRating(87);
+$movie5->setDirector(['Christopher Nolan']);
+$movie5->setCountry('United States');
+$movie5->setSynopsis("When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.");
+
+var_dump($movie5);
+$movies_array[] = $movie5;
 
 echo '<hr>';
 

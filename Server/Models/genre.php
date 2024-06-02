@@ -17,7 +17,7 @@ class Genre
          'Drama',
          'Fantasy',
          'Horror',
-         'Musical',
+         'Sci-Fi',
          'Thriller'
       ];
 
@@ -25,7 +25,7 @@ class Genre
 
       foreach ($genres_array as $genre) {
 
-         if ($input_genre === $genre) {
+         if (strtolower($input_genre) === strtolower($genre)) {
 
             $this->genre = $input_genre;
 

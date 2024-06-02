@@ -81,7 +81,7 @@ class Movie
    public function setRating(int $input_rating)
    {
 
-      $this->rating = floor(($input_rating)/10) . "." . $input_rating - floor(($input_rating)/10)*10;
+      $this->rating = floor(($input_rating)/10) . "." . $input_rating - floor(($input_rating)/10)*10 . "/10";
    }
    public function getRating()
    {
