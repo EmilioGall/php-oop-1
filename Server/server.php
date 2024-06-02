@@ -4,6 +4,7 @@ require_once __DIR__ . '/Models/movie.php';
 require_once __DIR__ . '/Models/genre.php';
 require_once __DIR__ . '/Models/actor.php';
 
+/***  CREATE MOVIES GENRES ARRAY  ***/
 $genres_array = [];
 
 $genre_animation = new Genre('Animation');
@@ -31,24 +32,39 @@ $genres_array[] = $genre_thriller;
 
 echo '<hr>';
 
-$movies_array = [];
+/***  CREATION MOVIES ACTORS ARRAY  ***/
+$the_lion_king_actors_array = [];
 
-$movie1 = new Movie('The Lion King', '1994', $genre_animation);
-$movie1->setSecondaryGenre($genre_adventure);
-$movie1->setTertiaryGenre($genre_drama);
-$movie1->setPoster('TheLionKing(1994)');
-$movie1->setLength(88);
-$movie1->setRating(85);
-$movie1->setDirector(['Roger Allers', 'Rob Minkoff']);
-$movie1->setCountry('United States');
-$movie1->setSynopsis("Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.");
+$matthew_broderick = new Actor('Matthew', 'Broderick');
+$the_lion_king_actors_array[] = $matthew_broderick;
+$jeremy_irons = new Actor('Jeremy', 'Irons');
+$the_lion_king_actors_array[] = $jeremy_irons;
+$james_earl_jones = new Actor('James Earl', 'Jones');
+$the_lion_king_actors_array[] = $james_earl_jones;
 
-var_dump($movie1->getSecondaryGenre());
-
-// var_dump($movie1);
-$movies_array[] = $movie1;
+// var_dump($the_lion_king_actors_array);
 
 echo '<hr>';
+
+$movies_array = [];
+
+$movie_the_lion_king = new Movie('The Lion King', '1994', $genre_animation);
+$movie_the_lion_king->setSecondaryGenre($genre_adventure);
+$movie_the_lion_king->setTertiaryGenre($genre_drama);
+$movie_the_lion_king->setPoster('TheLionKing(1994)');
+$movie_the_lion_king->setLength(88);
+$movie_the_lion_king->setRating(85);
+$movie_the_lion_king->setDirector(['Roger Allers', 'Rob Minkoff']);
+$movie_the_lion_king->setCountry('United States');
+$movie_the_lion_king->setCast($the_lion_king_actors_array);
+$movie_the_lion_king->setSynopsis("Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.");
+
+// var_dump($movie_the_lion_king->getSecondaryGenre());
+
+// var_dump($movie_the_lion_king);
+$movies_array[] = $movie_the_lion_king;
+
+// echo '<hr>';
 
 $movie2 = new Movie('Parasite', '2019', $genre_drama);
 $movie2->setSecondaryGenre($genre_thriller);
@@ -60,12 +76,12 @@ $movie2->setDirector(['Bong Joon Ho']);
 $movie2->setCountry('South Korea');
 $movie2->setSynopsis("Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.");
 
-var_dump($movie2->getSecondaryGenre());
+// var_dump($movie2->getSecondaryGenre());
 
 // var_dump($movie2);
 $movies_array[] = $movie2;
 
-echo '<hr>';
+// echo '<hr>';
 
 $movie3 = new Movie('Dune', '2021', $genre_action);
 $movie3->setSecondaryGenre($genre_adventure);

@@ -28,7 +28,7 @@ class Actor
       return $this->surname;
    }
 
-   public function setBirthday(array $input_date_birth)
+   public function setBirthday(string $input_date_birth)
    {
 
       $this->date_birth = $input_date_birth;
@@ -39,7 +39,7 @@ class Actor
       return $this->date_birth;
    }
 
-   public function setGender(array $input_gender)
+   public function setGender(string $input_gender)
    {
 
       $this->gender = $input_gender;
@@ -50,7 +50,7 @@ class Actor
       return $this->gender;
    }
 
-   public function setRole(array $input_role)
+   public function setRole(string $input_role)
    {
 
       $this->role = $input_role;
