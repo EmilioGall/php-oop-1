@@ -33,7 +33,7 @@ $genres_array[] = $genre_thriller;
 
 // var_dump($genres_array);
 
-echo '<hr>';
+// echo '<hr>';
 
 
 
@@ -97,9 +97,9 @@ $interstellar_actors_array[] = $anne_hathaway;
 $jessica_chastain = new Actor('Jessica', 'Chastain');
 $interstellar_actors_array[] = $jessica_chastain;
 
-var_dump($interstellar_actors_array);
+// var_dump($interstellar_actors_array);
 
-echo '<hr>';
+// echo '<hr>';
 
 /**********  CREATION MOVIES ARRAY  **********/
 $movies_array = [];
@@ -264,7 +264,7 @@ $movies_array[] = $movie10;
 
 // echo '<hr>';
 
-var_dump($movies_array);
+// var_dump($movies_array);
 
 
 send_http_response($movies_array);

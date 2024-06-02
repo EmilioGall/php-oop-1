@@ -37,10 +37,10 @@ class Genre
 
       if ($isFound === false) {
 
-         var_dump("Genre not allowed");
+         // var_dump("Genre not allowed");
       } else {
 
-         var_dump("Genre allowed");
+         // var_dump("Genre allowed");
       }
    }
 
