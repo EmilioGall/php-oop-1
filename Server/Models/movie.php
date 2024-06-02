@@ -65,7 +65,7 @@ class Movie
       return $this->tertiary_genre;
    }
 
-   public function setPoster(array $input_poster)
+   public function setPoster(string $input_poster)
    {
 
       $this->poster = $input_poster;
