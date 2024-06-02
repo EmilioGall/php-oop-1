@@ -8,6 +8,7 @@ class Movie
    private Genre  $primary_genre;
    private Genre  $secondary_genre;
    private Genre  $tertiary_genre;
+   private int    $length;
    private string $director;
    private string $country;
    private string $synopsis;
@@ -60,6 +61,17 @@ class Movie
    {
 
       return $this->tertiary_genre;
+   }
+
+   public function setLength(Genre $input_length)
+   {
+
+      $this->length = $input_length;
+   }
+   public function getLength()
+   {
+
+      return $this->length;
    }
 
    public function setDirector(string $input_director)
