@@ -8,7 +8,7 @@ class Movie
    private Genre  $primary_genre;
    private Genre  $secondary_genre;
    private Genre  $tertiary_genre;
-   private int    $length;
+   private string $length;
    private string $rating;
    private array  $director;
    private string $country;
@@ -67,7 +67,10 @@ class Movie
    public function setLength(int $input_length)
    {
 
-      $this->length = $input_length;
+      $hours_symbol = "h";
+      $minutes_symbol = "m";
+
+      $this->length = floor(($input_length)/60) . $hours_symbol . " " .$input_length - floor(($input_length)/60)*60 . $minutes_symbol;
    }
    public function getLength()
    {
