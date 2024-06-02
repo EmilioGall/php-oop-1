@@ -70,7 +70,7 @@ class Movie
       $hours_symbol = "h";
       $minutes_symbol = "m";
 
-      $this->length = floor(($input_length)/60) . $hours_symbol . " " .$input_length - floor(($input_length)/60)*60 . $minutes_symbol;
+      $this->length = floor(($input_length)/60) . $hours_symbol . " " . $input_length - floor(($input_length)/60)*60 . $minutes_symbol;
    }
    public function getLength()
    {
@@ -81,7 +81,7 @@ class Movie
    public function setRating(int $input_rating)
    {
 
-      $this->rating = ($input_rating)/10;
+      $this->rating = floor(($input_rating)/10) . "." . $input_rating - floor(($input_rating)/10)*10;
    }
    public function getRating()
    {
