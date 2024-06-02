@@ -39,7 +39,7 @@ $movie1->setLength(88);
 $movie1->setRating(85);
 $movie1->setDirector(['Roger Allers', 'Rob Minkoff']);
 $movie1->setCountry('United States');
-$movie1->setSynopsis('Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.');
+$movie1->setSynopsis("Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.");
 
 var_dump($movie1->getSecondaryGenre());
 
@@ -55,12 +55,26 @@ $movie2->setLength(132);
 $movie2->setRating(85);
 $movie2->setDirector(['Bong Joon Ho']);
 $movie2->setCountry('South Korea');
-$movie2->setSynopsis('Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.');
+$movie2->setSynopsis("Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.");
 
 var_dump($movie2->getSecondaryGenre());
 
 var_dump($movie2);
 $movies_array[] = $movie2;
+
+echo '<hr>';
+
+$movie3 = new Movie('Dune Part:I', '2021', $genre_action);
+$movie3->setSecondaryGenre($genre_adventure);
+$movie3->setTertiaryGenre($genre_drama);
+$movie3->setLength(155);
+$movie3->setRating(80);
+$movie3->setDirector(['Denis Villeneuve']);
+$movie3->setCountry('United States');
+$movie3->setSynopsis("A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.");
+
+var_dump($movie3);
+$movies_array[] = $movie3;
 
 echo '<hr>';
 
