@@ -9,7 +9,8 @@ class Movie
    private Genre  $secondary_genre;
    private Genre  $tertiary_genre;
    private int    $length;
-   private string $director;
+   private string $rating;
+   private array  $director;
    private string $country;
    private string $synopsis;
    private array  $cast;
@@ -63,7 +64,7 @@ class Movie
       return $this->tertiary_genre;
    }
 
-   public function setLength(Genre $input_length)
+   public function setLength(int $input_length)
    {
 
       $this->length = $input_length;
@@ -74,7 +75,18 @@ class Movie
       return $this->length;
    }
 
-   public function setDirector(string $input_director)
+   public function setRating(int $input_rating)
+   {
+
+      $this->rating = ($input_rating)/10;
+   }
+   public function getRating()
+   {
+
+      return $this->rating;
+   }
+
+   public function setDirector(array $input_director)
    {
 
       $this->director = $input_director;

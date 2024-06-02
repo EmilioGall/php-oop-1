@@ -32,10 +32,19 @@ var_dump($genres_array);
 
 $movies_array = [];
 
-$movie1 = new Movie('La riconquista dei pianeti', '2024', $genre_fantasy);
-$movie1->setSecondaryGenre($genre_animation);
+$movie1 = new Movie('The Lion King', '1994', $genre_animation);
+$movie1->setSecondaryGenre($genre_adventure);
+$movie1->setTertiaryGenre($genre_drama);
+$movie1->setLength(88);
+$movie1->setRating(85);
+$movie1->setDirector(['Roger Allers', 'Rob Minkoff']);
+$movie1->setCountry('United States');
+$movie1->setSynopsis('Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.');
+
+
 
 var_dump($movie1);
+
 
 var_dump($movie1->getSecondaryGenre());
 
