@@ -8,6 +8,7 @@ class Movie
    private Genre  $primary_genre;
    private Genre  $secondary_genre;
    private Genre  $tertiary_genre;
+   private string $poster;
    private string $length;
    private string $rating;
    private array  $director;
@@ -62,6 +63,17 @@ class Movie
    {
 
       return $this->tertiary_genre;
+   }
+
+   public function setPoster(array $input_poster)
+   {
+
+      $this->poster = $input_poster;
+   }
+   public function getPoster()
+   {
+
+      return $this->poster;
    }
 
    public function setLength(int $input_length)
