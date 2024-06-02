@@ -4,7 +4,9 @@ require_once __DIR__ . '/Models/movie.php';
 require_once __DIR__ . '/Models/genre.php';
 require_once __DIR__ . '/Models/actor.php';
 
-/***  CREATE MOVIES GENRES ARRAY  ***/
+
+
+/**********  CREATE MOVIES GENRES ARRAY  **********/
 $genres_array = [];
 
 $genre_animation = new Genre('Animation');
@@ -32,7 +34,11 @@ $genres_array[] = $genre_thriller;
 
 echo '<hr>';
 
-/***  CREATION MOVIES ACTORS ARRAY  ***/
+
+
+/**********  CREATION MOVIES ACTORS ARRAYS  **********/
+
+/* The Lion King */
 $the_lion_king_actors_array = [];
 
 $matthew_broderick = new Actor('Matthew', 'Broderick');
@@ -44,10 +50,27 @@ $the_lion_king_actors_array[] = $james_earl_jones;
 
 // var_dump($the_lion_king_actors_array);
 
+/* Parasite */
+$parasite_actors_array = [];
+// Song Kang-ho - Lee Sun-kyun - Cho Yeo-jeong
+$song_kangho = new Actor('Song', 'Kang-ho');
+$parasite_actors_array[] = $song_kangho;
+$lee_sunkyun = new Actor('Lee', 'Sun-kyun');
+$parasite_actors_array[] = $lee_sunkyun;
+$cho_yeojeong = new Actor('Cho', 'Yeo-jeong');
+$parasite_actors_array[] = $cho_yeojeong;
+
+// var_dump($parasite_actors_array);
+
+
+
 echo '<hr>';
 
+/**********  CREATION MOVIES ARRAY  **********/
 $movies_array = [];
 
+
+/* The Lion King */
 $movie_the_lion_king = new Movie('The Lion King', '1994', $genre_animation);
 $movie_the_lion_king->setSecondaryGenre($genre_adventure);
 $movie_the_lion_king->setTertiaryGenre($genre_drama);
@@ -64,22 +87,22 @@ $movie_the_lion_king->setSynopsis("Lion prince Simba and his father are targeted
 // var_dump($movie_the_lion_king);
 $movies_array[] = $movie_the_lion_king;
 
-// echo '<hr>';
 
-$movie2 = new Movie('Parasite', '2019', $genre_drama);
-$movie2->setSecondaryGenre($genre_thriller);
-// $movie2->setTertiaryGenre(null);
-$movie2->setPoster('Parasite(2019)');
-$movie2->setLength(132);
-$movie2->setRating(85);
-$movie2->setDirector(['Bong Joon Ho']);
-$movie2->setCountry('South Korea');
-$movie2->setSynopsis("Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.");
+/* Parasite */
+$movie_parasite = new Movie('Parasite', '2019', $genre_drama);
+$movie_parasite->setSecondaryGenre($genre_thriller);
+// $movie_parasite->setTertiaryGenre(null);
+$movie_parasite->setPoster('Parasite(2019)');
+$movie_parasite->setLength(132);
+$movie_parasite->setRating(85);
+$movie_parasite->setDirector(['Bong Joon Ho']);
+$movie_parasite->setCountry('South Korea');
+$movie_parasite->setSynopsis("Greed and class discrimination threaten the newly-formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.");
 
-// var_dump($movie2->getSecondaryGenre());
+// var_dump($movie_parasite->getSecondaryGenre());
 
-// var_dump($movie2);
-$movies_array[] = $movie2;
+// var_dump($movie_parasite);
+$movies_array[] = $movie_parasite;
 
 // echo '<hr>';
 
