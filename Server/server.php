@@ -29,6 +29,7 @@ $genres_array[] = $genre_thriller;
 
 // var_dump($genres_array);
 
+echo '<hr>';
 
 $movies_array = [];
 
@@ -64,7 +65,7 @@ $movies_array[] = $movie2;
 
 echo '<hr>';
 
-$movie3 = new Movie('Dune Part:I', '2021', $genre_action);
+$movie3 = new Movie('Dune', '2021', $genre_action);
 $movie3->setSecondaryGenre($genre_adventure);
 $movie3->setTertiaryGenre($genre_drama);
 $movie3->setLength(155);
@@ -75,6 +76,20 @@ $movie3->setSynopsis("A noble family becomes embroiled in a war for control over
 
 var_dump($movie3);
 $movies_array[] = $movie3;
+
+echo '<hr>';
+
+$movie4 = new Movie('Dune: Part II', '2024', $genre_action);
+$movie4->setSecondaryGenre($genre_adventure);
+$movie4->setTertiaryGenre($genre_drama);
+$movie4->setLength(166);
+$movie4->setRating(86);
+$movie4->setDirector(['Denis Villeneuve']);
+$movie4->setCountry('United States');
+$movie4->setSynopsis("Paul Atreides unites with Chani and the Fremen while seeking revenge against the conspirators who destroyed his family.");
+
+var_dump($movie4);
+$movies_array[] = $movie4;
 
 echo '<hr>';
 
