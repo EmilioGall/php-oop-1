@@ -99,11 +99,81 @@ $movie5->setTertiaryGenre($genre_scifi);
 $movie5->setLength(169);
 $movie5->setRating(87);
 $movie5->setDirector(['Christopher Nolan']);
-$movie5->setCountry('United States');
+$movie5->setCountry('British-American');
 $movie5->setSynopsis("When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.");
 
 var_dump($movie5);
 $movies_array[] = $movie5;
+
+echo '<hr>';
+
+$movie6 = new Movie('The Matrix', '1999', $genre_action);
+$movie6->setSecondaryGenre($genre_scifi);
+// $movie6->setTertiaryGenre($genre_scifi);
+$movie6->setLength(136);
+$movie6->setRating(87);
+$movie6->setDirector(['Lana Wachowski', 'Lilly Wachowski']);
+$movie6->setCountry('United States');
+$movie6->setSynopsis("When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.");
+
+var_dump($movie6);
+$movies_array[] = $movie6;
+
+echo '<hr>';
+
+$movie7 = new Movie('Inception', '2010', $genre_action);
+$movie7->setSecondaryGenre($genre_adventure);
+$movie7->setTertiaryGenre($genre_scifi);
+$movie7->setLength(148);
+$movie7->setRating(88);
+$movie7->setDirector(['Christopher Nolan']);
+$movie7->setCountry('United States');
+$movie7->setSynopsis("A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.");
+
+var_dump($movie7);
+$movies_array[] = $movie7;
+
+echo '<hr>';
+
+$movie8 = new Movie('The Lord of the Rings: The Return of the King', '2003', $genre_action);
+$movie8->setSecondaryGenre($genre_adventure);
+$movie8->setTertiaryGenre($genre_drama);
+$movie8->setLength(201);
+$movie8->setRating(90);
+$movie8->setDirector(['Peter Jackson']);
+$movie8->setCountry('United States');
+$movie8->setSynopsis("Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.");
+
+var_dump($movie8);
+$movies_array[] = $movie8;
+
+echo '<hr>';
+
+$movie9 = new Movie('The Godfather', '1972', $genre_crime);
+$movie9->setSecondaryGenre($genre_drama);
+// $movie9->setTertiaryGenre($genre_drama);
+$movie9->setLength(175);
+$movie9->setRating(92);
+$movie9->setDirector(['Francis Ford Coppola']);
+$movie9->setCountry('United States');
+$movie9->setSynopsis("The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.");
+
+var_dump($movie9);
+$movies_array[] = $movie9;
+
+echo '<hr>';
+
+$movie10 = new Movie('The Dark Knight', '2008', $genre_action);
+$movie10->setSecondaryGenre($genre_crime);
+$movie10->setTertiaryGenre($genre_drama);
+$movie10->setLength(152);
+$movie10->setRating(90);
+$movie10->setDirector(['Christopher Nolan']);
+$movie10->setCountry('United States');
+$movie10->setSynopsis("When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.");
+
+var_dump($movie10);
+$movies_array[] = $movie10;
 
 echo '<hr>';
 
