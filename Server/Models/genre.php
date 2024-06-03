@@ -44,7 +44,7 @@ class Genre
       }
    }
 
-   public function getPrimaryGenre()
+   public function getGenre()
    {
 
       return $this->genre;

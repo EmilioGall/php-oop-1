@@ -117,7 +117,7 @@ class Movie
 
       $this->country = $input_country;
    }
-   public function getcountry()
+   public function getCountry()
    {
 
       return $this->country;
@@ -128,7 +128,7 @@ class Movie
 
       $this->synopsis = $input_synopsis;
    }
-   public function getsynopsis()
+   public function getSynopsis()
    {
 
       return $this->synopsis;
@@ -139,7 +139,7 @@ class Movie
 
       $this->cast = $input_cast;
    }
-   public function getcast()
+   public function getCast()
    {
 
       return $this->cast;

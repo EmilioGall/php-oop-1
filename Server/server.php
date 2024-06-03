@@ -7,7 +7,7 @@ require_once __DIR__ . '/Models/actor.php';
 
 
 
-/**********  CREATE MOVIES GENRES ARRAY  **********/
+/**********  CREATION MOVIES GENRES ARRAY  **********/
 $genres_array = [];
 
 $genre_animation = new Genre('Animation');
@@ -266,5 +266,44 @@ $movies_array[] = $movie10;
 
 // var_dump($movies_array);
 
+$tmp_movie_array = [];
 
-send_http_response($movies_array);
+$tmp_title = $movie_the_lion_king->getTitle();
+$tmp_movie_array['title'] = $tmp_title;
+
+$tmp_production_year = $movie_the_lion_king->getProductionYear();
+$tmp_movie_array['production_year'] = $tmp_production_year;
+
+$tmp_primary_genre = $movie_the_lion_king->getPrimaryGenre()->getGenre();
+$tmp_movie_array['primary_genre'] = $tmp_primary_genre;
+
+$tmp_secondary_genre = $movie_the_lion_king->getSecondaryGenre()->getGenre();
+$tmp_movie_array['secondary_genre'] = $tmp_secondary_genre;
+
+$tmp_tertiary_genre = $movie_the_lion_king->getTertiaryGenre()->getGenre();
+$tmp_movie_array['tertiary_genre'] = $tmp_tertiary_genre;
+
+$tmp_poster = $movie_the_lion_king->getPoster();
+$tmp_movie_array['poster'] = $tmp_poster;
+
+$tmp_length = $movie_the_lion_king->getLength();
+$tmp_movie_array['length'] = $tmp_length;
+
+$tmp_rating = $movie_the_lion_king->getRating();
+$tmp_movie_array['rating'] = $tmp_rating;
+
+$tmp_director = $movie_the_lion_king->getDirector();
+$tmp_movie_array['director'] = $tmp_director;
+
+$tmp_country = $movie_the_lion_king->getCountry();
+$tmp_movie_array['country'] = $tmp_country;
+
+$tmp_synopsis = $movie_the_lion_king->getSynopsis();
+$tmp_movie_array['synopsis'] = $tmp_synopsis;
+
+$tmp_cast = $movie_the_lion_king->getCast();
+$tmp_movie_array['cast'] = $tmp_cast;
+
+// var_dump($tmp_movie_array);
+
+send_http_response($tmp_movie_array);
